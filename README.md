@@ -10,14 +10,18 @@ This project focuses on predicting immune escape variants of SARS-CoV-2 using co
 - Identify variants with potential immune evasion
 - Build predictive models for variant classification
 
-## Methods
-- Mutation profiling (E484A, N501Y)
-- Feature extraction from sequence and structural data
-- Machine learning-based classification
+## Methodology
+1. Collected mutation data from SARS-CoV-2 datasets
+2. Performed mutation profiling and feature extraction
+3. Integrated structural and sequence-level insights
+4. Applied machine learning models for classification
+5. Evaluated variants for immune escape potential
 
-## Results
-- Identified high-risk mutations associated with immune escape
-- Developed a predictive framework for variant prioritization
+ ## Results Visualization
+Key visual outputs include:
+- Mutation distribution analysis
+- Variant classification outputs
+- Structural impact insights
 
 ## Tools Used
 - Python
@@ -35,3 +39,10 @@ Completed
 ## Dataset
 - SARS-CoV-2 mutation datasets
 - Public genomic and structural data sources
+
+## Biological Significance
+This study helps in identifying SARS-CoV-2 variants with enhanced immune evasion capabilities, contributing to vaccine and therapeutic strategy development.
+
+## Future Scope
+- Integration with real-time variant surveillance systems
+- Deep learning-based mutation impact prediction
