@@ -1,0 +1,6 @@
+E484A: Loss of charge → reduced antibody binding
+N501Y: Bulkier residue → increased ACE2 affinity
+
+RMSD:
+E484A vs WT: 1.45 Å
+N501Y vs WT: 1.31 Å
