@@ -1,0 +1,8 @@
+Model: Random Forest
+
+Accuracy: ~0.90+
+Precision: ~0.90
+Recall: ~0.90
+
+Key Insight:
+E484A and N501Y are high-importance mutations contributing to immune escape prediction.
