@@ -1,75 +1,47 @@
-# SARS-CoV-2 Mutation Escape Prediction Model
-
 import pandas as pd
-import numpy as np
-
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, classification_report
 from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import accuracy_score, classification_report
 import matplotlib.pyplot as plt
 
-# ---------------------------
-# STEP 1: Create Dataset
-# ---------------------------
-
-data = {
-    "Mutation": ["E484A", "N501Y", "L452R", "D614G", "K417N"],
-    "Position": [484, 501, 452, 614, 417],
-    "WT_AA": ["E", "N", "L", "D", "K"],
-    "Mut_AA": ["A", "Y", "R", "G", "N"],
-    "Region": ["RBD", "RBD", "RBD", "S1/S2", "RBD"],
-    "Escape_Label": [1, 1, 1, 1, 1]  # High escape (example)
-}
-
+# Load dataset
 df = pd.read_csv("data/mutation_dataset.csv")
 
-# ---------------------------
-# STEP 2: Encode Features
-# ---------------------------
-
+# Encode categorical features
 le = LabelEncoder()
 
-df["WT_AA"] = le.fit_transform(df["WT_AA"])
-df["Mut_AA"] = le.fit_transform(df["Mut_AA"])
-df["Region"] = le.fit_transform(df["Region"])
+for col in ["WT_AA", "Mut_AA", "Region", "Charge_Change", "Polarity_Change", "Hydropathy_Change"]:
+    df[col] = le.fit_transform(df[col])
 
-X = df[["Position", "WT_AA", "Mut_AA", "Region"]]
+# Features and label
+X = df.drop(columns=["Mutation", "Escape_Label"])
 y = df["Escape_Label"]
 
-# ---------------------------
-# STEP 3: Train-Test Split
-# ---------------------------
-
+# Train-test split
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42
 )
 
-# ---------------------------
-# STEP 4: Train Model
-# ---------------------------
-
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+# Model
+model = RandomForestClassifier(n_estimators=200, random_state=42)
 model.fit(X_train, y_train)
 
-# ---------------------------
-# STEP 5: Predictions
-# ---------------------------
-
+# Predictions
 y_pred = model.predict(X_test)
 
+# Evaluation
 print("Accuracy:", accuracy_score(y_test, y_pred))
 print("\nClassification Report:\n", classification_report(y_test, y_pred))
 
-# ---------------------------
-# STEP 6: Feature Importance
-# ---------------------------
-
+# Feature importance
 importances = model.feature_importances_
 features = X.columns
 
 plt.figure()
 plt.barh(features, importances)
-plt.xlabel("Importance")
 plt.title("Feature Importance - Mutation Escape Prediction")
+plt.xlabel("Importance Score")
+plt.tight_layout()
+plt.savefig("results/feature_importance.png")
 plt.show()
