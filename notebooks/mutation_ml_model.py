@@ -22,7 +22,7 @@ data = {
     "Escape_Label": [1, 1, 1, 1, 1]  # High escape (example)
 }
 
-df = pd.DataFrame(data)
+df = pd.read_csv("data/mutation_dataset.csv")
 
 # ---------------------------
 # STEP 2: Encode Features
