@@ -26,3 +26,12 @@ This project focuses on predicting immune escape variants of SARS-CoV-2 using co
 
 ## Status
 Completed
+
+## Key Outcomes
+- Identified immune escape-associated mutations (E484A, N501Y)
+- Developed a predictive framework for variant classification
+- Demonstrated integration of bioinformatics and machine learning approaches
+
+## Dataset
+- SARS-CoV-2 mutation datasets
+- Public genomic and structural data sources
