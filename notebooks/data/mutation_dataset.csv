@@ -1,0 +1,16 @@
+Mutation,Position,WT_AA,Mut_AA,Region,Charge_Change,Polarity_Change,Hydropathy_Change,Escape_Label
+E484A,484,E,A,RBD,Negative_to_Neutral,Polar_to_Nonpolar,Decrease,1
+N501Y,501,N,Y,RBD,Neutral,Polar_to_Nonpolar,Increase,1
+L452R,452,L,R,RBD,Neutral_to_Positive,Nonpolar_to_Polar,Increase,1
+D614G,614,D,G,S1/S2,Negative_to_Neutral,Polar_to_Nonpolar,Decrease,1
+K417N,417,K,N,RBD,Positive_to_Neutral,Polar,Decrease,1
+T478K,478,T,K,RBD,Neutral_to_Positive,Polar,Increase,1
+P681H,681,P,H,S1/S2,Neutral_to_Positive,Nonpolar_to_Polar,Increase,1
+A570D,570,A,D,S1,Neutral_to_Negative,Nonpolar_to_Polar,Increase,0
+G446S,446,G,S,RBD,Neutral,Nonpolar_to_Polar,Increase,1
+S477N,477,S,N,RBD,Neutral,Polar,Minimal,1
+Y505H,505,Y,H,RBD,Neutral_to_Positive,Nonpolar_to_Polar,Increase,1
+V367F,367,V,F,RBD,Neutral,Nonpolar,Minimal,0
+F490S,490,F,S,RBD,Neutral,Nonpolar_to_Polar,Decrease,1
+R346K,346,R,K,RBD,Positive,Polar,Minimal,0
+E406W,406,E,W,RBD,Negative_to_Neutral,Polar_to_Nonpolar,Increase,1
