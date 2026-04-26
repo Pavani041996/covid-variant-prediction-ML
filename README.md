@@ -31,10 +31,10 @@ Key visual outputs include:
 ## Status
 Completed
 
-## Key Outcomes
-- Identified immune escape-associated mutations (E484A, N501Y)
-- Developed a predictive framework for variant classification
-- Demonstrated integration of bioinformatics and machine learning approaches
+## Key Findings
+- Identified gene expression signatures relevant to hepatobiliary carcinoma
+- Functional enrichment revealed pathways related to tumor progression
+- Biomarker candidates were shortlisted for further validation
 
 ## Dataset
 - SARS-CoV-2 mutation datasets
