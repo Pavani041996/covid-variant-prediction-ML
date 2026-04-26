@@ -1,4 +1,4 @@
-# covid-variant-prediction-ML
+# Covid-variant-prediction-ML
 Machine learning-based prediction of SARS-CoV-2 immune escape variants
 # SARS-CoV-2 Variant Prediction using Machine Learning
 
